@@ -1,0 +1,51 @@
+{
+    "id": 1,
+    "info": {
+        "name": {
+            "first": "Åsmundur",
+            "last": "Thorsen",
+            "full": "Åsmundur Thorsen"
+        },
+        "email": "ozzy@mail.dk",
+        "password": "password"
+    },
+    "apps": {
+        "communication": {
+            "primary": "slack",
+            "slack": {
+                "appName": "slack",
+                "token": "xoxb-3350956815889-3377223714081-wTzuVus0t714vDNXG5UhXwCq",
+                "channel": "agurk-api"
+            },
+            "discord": {
+                "appName": "discord",
+                "token": "dsa",
+                "channel": "dsa"
+            }
+        },
+        "kanban": {
+            "primary": "gitkraken",
+            "trello": {
+                "appName": "trello",
+                "token": "dsa",
+                "key": "dsa"
+            },
+            "gitkraken": {
+                "appName": "gitkraken",
+                "token": "p0b5fc6645dbcdbc19f10ff68fe8b7a679d123dfb",
+                "key": "67hhes45j65v022q4qhj",
+                "boardID": "6270e79c0dd39d001eff42e5"
+            }
+        },
+        "calendar": {
+            "primary": "google",
+            "google": {
+                "appName": "google",
+                "clientId": "374894474122-1fb8j3gufb1fc38kul9chr4752ijbr4k.apps.googleusercontent.com",
+                "clientSecret": "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",
+                "refreshToken": "1//04WladoPkrjEhCgYIARAAGAQSNwF-L9Irq83UkeDNEXWBgNxIM-7-4q0ZvPXWileUqDPSHEexH9NMw8nJdt3xh5_Ug2_xvTqHwhk"
+            }
+        }
+    },
+    "groupId": "ztcl0g"
+}

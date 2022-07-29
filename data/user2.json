@@ -1,0 +1,38 @@
+{
+    "id": 2,
+    "info": {
+        "name": {
+            "first": "Alija",
+            "last": "Cerimagic",
+            "full": "Alija Cerimagic"
+        },
+        "email": "alija@mail.dk",
+        "password": "hej123"
+    },
+    "apps": {
+        "communication": {
+            "primary": "slack",
+            "discord": {
+                "appName": "Discord",
+                "token": "token",
+                "channel": "channelid"
+            },
+            "slack": {
+                "appName": "Slack",
+                "token": "token",
+                "channel": "channelname"
+            }
+        },
+        "kanban": {},
+        "calendar": {
+            "primary": "google",
+            "google": {
+                "appName": "googleCalendar",
+                "clientId": "315158259588-au03u77dkenrhsm8a0mqtnegdvrlddnf.apps.googleusercontent.com",
+                "clientSecret": "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",
+                "refreshToken": "1//04zPf8ulksOzyCgYIARAAGAQSNwF-L9Irmijuw-KtMxXxPsIfiNSRZth2y_9EBBvHPBWlYm95o7fvQiyQ8VnLyzK64wMV2kcRL3s"
+            }
+        }
+    },
+    "groupId": "ztcl0g"
+}

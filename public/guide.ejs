@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgurkAPI</title>
+    <link rel="stylesheet" href="styles/guide.css">
+    <!-- <script>
+        const user = <%- JSON.stringify(user) %>;
+    </script> -->
+</head>
+
+<body>
+    <div class="topBar">
+        <div class="nav">
+            <a class ="links" href="guide" id="guideBtn">GUIDE</a>
+            <a class ="links" href="logout" id="logOutBtn">SIGN OUT</a>
+        </div>
+        <div class="welcome">
+            <h2>Welcome <%=user.info.name.full%></h2>
+        </div>
+        <div class="logoContainer">
+            <img src="images/logo.png" id="logo">
+            <a id="logoRef" href="/node1/">AgurkAPI</a>
+        </div>
+    </div>
+    <div class="pageContainer">
+        <div class="wrapper">
+            <div class="guideNav">
+                <h1>AgurkAPI GUIDE</h1>
+                <div class="guideButtons">
+                    <h2 id="currentGuide">SINGLE USER</h2>
+                    <div id="guideButtons">
+                        <a href="#" id="singleUserBtn" class="btn">SINGLE USER</a>
+                        <a href="#" id="groupBtn" class="btn">GROUPS</a>
+                    </div>
+                </div>
+            </div>
+            <div id="groupGuide" style="display: none">
+                <div class="functionGuide" id="kanbanGuide">
+                    <div class="functionCategory">
+                        <h2>Kanban:</h2>
+                    </div>
+                    <div class="functions">
+                        <div id="createCard" class="jsonCode">
+                            <h3>Create Card</h3>
+                            <em>POST: /kanban</em>
+                            <pre>
+                                <code>
+{
+    "mode"     :  "groupcreate",
+    "userID"   :  <em>USERID</em>,
+    "payload"  :  {
+        "listName" :  <em><strong>EXACT </strong>LIST NAME</em>,  (string)
+        "title"    :  <em>TITLE</em>             (string)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div id="deleteCard" class="jsonCode">
+                            <h3>Delete Card</h3>
+                            <em>POST: /kanban</em>
+                            <pre>
+                                <code>
+{
+    "mode"     :  "groupdelete",
+    "userID"   :  <em>USERID</em>,
+    "payload"  :  {
+        "cardName" :  <em><strong>EXACT </strong>CARD NAME</em>,  (string)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div id="editCard" class="jsonCode">
+                            <h3>Edit Card</h3>
+                            <em>POST: /kanban</em>
+                            <pre>
+                                <code>
+    {
+        "mode":"groupedit",
+        "userID":0,
+        "payload": {
+            "cardName":"Card Name",
+            "listName":"List name",
+            "editParams":{
+<em>optional</em>        "title":"New Title / New Card Name",
+<em>optional</em>        "desc":"New Description",
+<em>optional</em>        "archive":"Archive card (TRUE / FALSE)",
+<em>optional</em>        "listName":"New List Name to place card"    
+            }                                               
+        }                                                   
+    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="functionGuide" id="calendarGuide">
+                    <div class="functionCategory">
+                        <h2>Calendar:</h2>
+                    </div>
+                    <div class="functions">
+                        <div id="createEvent" class="jsonCode">
+                            <h3>Create Event</h3>
+                            <em>POST: /calendar</em>
+                            <pre>
+                                <code>
+{
+    "data": {
+        "mode"         :    "groupcreate",
+        "userId"       :    <em>USERID</em>,
+        "title"        :    <em>USERID</em> (string),
+        "description"  :    <em>MESSAGE</em> (string),
+        "location"     :    <em>LOCATION</em> (string),
+        "year"         :    <em>YEAR</em> (integer),
+        "month"        :    <em>MONTH</em> (integer),
+        "date"         :    <em>DAY</em> (integer),
+        "hour"         :    <em>HOUR</em> (integer),
+        "minutes"      :    <em>DURATION</em> (integer)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div id="deleteEvent" class="jsonCode">
+                            <h3>Delete Event</h3>
+                            <em>POST: /calendar</em>
+                            <pre>
+                                <code>
+{
+    "data": {
+        "mode"       :    "groupdelete",
+        "userId"     :  <em>USERID</em>,
+        "eventName"  :  <em><strong>EXACT</strong> EVENTNAME</em> (string)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div id="editEvent" class="jsonCode">
+                            <h3>Edit Event</h3>
+                            <em>POST: /calendar</em>
+                            <pre>
+                                <code>
+{
+    "data": {
+        "mode"           :    "groupedit",
+        "userId"         :    <em>USERID</em>,
+        "originalTitle"  :    <em><strong>EXACT</strong> CURRENT TITLE</em> (string)        
+        "title"          :    <em>NEW TITLE</em> (string),
+        "description"    :    <em>DESCRIPTION</em> (string),
+        "location"       :    <em>LOCATION</em> (string),
+        "year"           :    <em>YEAR</em> (integer),
+        "month"          :    <em>MONTH</em> (integer),
+        "date"           :    <em>DAY</em> (integer),
+        "hour"           :    <em>HOUR</em> (integer),
+        "minutes"        :    <em>DURATION</em> (integer)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="singleUserGuide">
+                <div class="functionGuide" id="communicationGuide">
+                    <div class="functionCategory">
+                        <h2>Communication:</h2>
+                    </div>
+                    <div class="functions">
+                        <div id="messaging" class="jsonCode">
+                            <h3>Messaging</h3>
+                            <em>POST: /message</em>
+                            <pre>
+                                <code>
+{
+    "receiver" :  <em>USERID</em>,
+    "sender"   :  <em>USERID</em>,
+    "message"  :  <em>MESSAGE</em> (string)
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="functionGuide" id="kanbanGuide">
+                    <div class="functionCategory">
+                        <h2>Kanban:</h2>
+                    </div>
+                    <div class="functions">
+                        <div id="createCard" class="jsonCode">
+                            <h3>Create Card</h3>
+                            <em>POST: /kanban</em>
+                            <pre>
+                                <code>
+{
+    "mode"     :  "create",
+    "userID"   :  <em>USERID</em>,
+    "payload"  :  {
+        "listName" :  <em><strong>EXACT </strong>LIST NAME</em>,  (string)
+        "title"    :  <em>TITLE</em>             (string)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div id="deleteCard" class="jsonCode">
+                            <h3>Delete Card</h3>
+                            <em>POST: /kanban</em>
+                            <pre>
+                                <code>
+{
+    "mode"     :  "delete",
+    "userID"   :  <em>USERID</em>,
+    "payload"  :  {
+        "cardName" :  <em><strong>EXACT </strong>CARD NAME</em>,  (string)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div id="editCard" class="jsonCode">
+                            <h3>Edit Card</h3>
+                            <em>POST: /kanban</em>
+                            <pre>
+                                <code>
+    {
+        "mode":"edit",
+        "userID":0,
+        "payload": {
+            "cardName":"Card Name",
+            "listName":"List name",
+            "editParams":{
+<em>optional</em>        "title":"New Title / New Card Name",
+<em>optional</em>        "desc":"New Description",
+<em>optional</em>        "archive":"Archive card (TRUE / FALSE)",
+<em>optional</em>        "listName":"New List Name to place card"    
+            }                                               
+        }                                                   
+    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="functionGuide" id="calendarGuide">
+                    <div class="functionCategory">
+                        <h2>Calendar:</h2>
+                    </div>
+                    <div class="functions">
+                        <div id="createEvent" class="jsonCode">
+                            <h3>Create Event</h3>
+                            <em>POST: /calendar</em>
+                            <pre>
+                                <code>
+{
+    "data": {
+        "mode"         :    "create",
+        "userId"       :    <em>USERID</em>,
+        "title"        :    <em>USERID</em> (string),
+        "description"  :    <em>MESSAGE</em> (string),
+        "location"     :    <em>LOCATION</em> (string),
+        "year"         :    <em>YEAR</em> (integer),
+        "month"        :    <em>MONTH</em> (integer),
+        "date"         :    <em>DAY</em> (integer),
+        "hour"         :    <em>HOUR</em> (integer),
+        "minutes"      :    <em>DURATION</em> (integer)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div id="deleteEvent" class="jsonCode">
+                            <h3>Delete Event</h3>
+                            <em>POST: /calendar</em>
+                            <pre>
+                                <code>
+{
+    "data": {
+        "mode"       :    "delete",
+        "userId"     :  <em>USERID</em>,
+        "eventName"  :  <em><strong>EXACT</strong> EVENTNAME</em> (string)
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div id="editEvent" class="jsonCode">
+                            <h3>Edit Event</h3>
+                            <em>POST: /calendar</em>
+                            <pre>
+                                <code>
+        {
+            "data": {
+                "mode"           :    "edit",
+                "userId"         :    <em>USERID</em>,
+                "originalTitle"  :    <em><strong>EXACT</strong> CURRENT TITLE</em> (string)        
+<em>optional</em>        "title"          :    <em>NEW TITLE</em> (string),
+<em>optional</em>        "description"    :    <em>DESCRIPTION</em> (string),
+<em>optional</em>        "location"       :    <em>LOCATION</em> (string),
+<em>optional</em>        "year"           :    <em>YEAR</em> (integer),
+<em>optional</em>        "month"          :    <em>MONTH</em> (integer),
+<em>optional</em>        "date"           :    <em>DAY</em> (integer),
+<em>optional</em>        "hour"           :    <em>HOUR</em> (integer),
+<em>optional</em>        "minutes"        :    <em>DURATION</em> (integer)
+            }
+        }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    let singleUserBtn = document.getElementById('singleUserBtn')
+    let singleUserGuide = document.getElementById('singleUserGuide')
+
+    let groupBtn = document.getElementById('groupBtn')
+    let groupGuide = document.getElementById('groupGuide')
+
+    let currentGuideTitle = document.getElementById('currentGuide')
+    // singleUserBtn.addEventListener('onclick', () => {
+
+    // })
+
+    singleUserBtn.addEventListener("click", function () {
+        groupGuide.style.display = 'none'
+        singleUserGuide.style.display = 'block'
+        currentGuideTitle.innerHTML = 'SINGLE USER'
+    });
+
+    groupBtn.addEventListener('click', function () {
+        singleUserGuide.style.display = 'none'
+        groupGuide.style.display = 'block'
+        currentGuideTitle.innerHTML = 'GROUPS'
+    })
+</script>
+
+</html>

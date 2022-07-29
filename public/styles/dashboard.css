@@ -1,0 +1,102 @@
+html body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    width: 100vw;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.wrapper {
+    position: absolute;
+    left: 0;
+	width: 33%;
+	margin: 2%;
+	height: 100vh;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+#logoRef {
+    text-decoration: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+#logoRef:hover {
+    color: #fff;
+}
+
+#logo {
+    height: auto;
+    width: 6em;
+    margin-right: 2rem;
+    filter:brightness(0) invert(1);
+}
+
+.groupWrapper {
+    position: absolute;
+    right: 0;
+	width: 33%;
+	margin: 2%;
+	height: 100vh;
+}
+
+
+
+#groupTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.topBar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: #AABBCC;
+    padding: 2%;
+}
+
+.topBar .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.topBar .welcome {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.topBar .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 1em;
+    margin-left: 2rem;
+}
+
+.topBar .links:hover {
+    color: #ddd;
+    border: 2px solid #ddd;
+}

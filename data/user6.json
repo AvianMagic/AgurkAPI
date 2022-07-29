@@ -1,0 +1,24 @@
+{
+    "id": 6,
+    "info": {
+        "name": {
+            "first": "test",
+            "last": "test",
+            "full": "test test"
+        },
+        "email": "testtests@mail.dk",
+        "password": "test"
+    },
+    "apps": {
+        "communication": {},
+        "kanban": {},
+        "calendar": {
+            "primary": "google",
+            "google": {
+                "appName": "google",
+                "refreshToken": "test",
+                "clientSecret": "test"
+            }
+        }
+    }
+}

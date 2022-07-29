@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgurkAPI - LOGIN</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="menuContainer">
+        <div class="menuBox">
+            <h1>You have been logged out!</h1>
+            <p id="timer">hello</p>
+        </div>
+    </div>
+</body>
+<script>
+    setTimeout(function() {
+        window.location.href="/node1/";
+    }, 3500);
+
+    const timer = document.getElementById('timer');
+    timer.innerHTML = "You'll get redirected in 3 seconds..."
+    setTimeout(function() {
+        timer.innerHTML = "You'll get redirected in 2 seconds..."
+    }, 1000);
+
+    setTimeout(function() {
+        timer.innerHTML = "You'll get redirected in 1 seconds..."
+    }, 2000);
+
+    setTimeout(function() {
+        timer.innerHTML = "REDIRECTING..."
+    }, 3000);
+</script>
+</html>

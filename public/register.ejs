@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgurkAPI - LOGIN</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="menuContainer">
+        <div class="menuBox">
+            <h1>Register at AgurkAPI</h1>
+            <form action="register" method="POST">
+                <input id="firstName" type="text" name="firstName" placeholder="First Name" required autofocus>
+                <input id="lastName" type="text" name="lastName" placeholder="Last Name">
+                <input id="email" type="email" name="email" placeholder="EMAIL" required>
+                <input id="password" type="password" name="password" placeholder="PASSWORD" required>
+                <input id="verifyPassword" type="password" name="password" placeholder="VERIFY PASSWORD" required>
+                <input id="registerButton" type="submit" value="REGISTER" disabled>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="scripts/register.js"></script>
+</html>

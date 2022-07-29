@@ -1,0 +1,52 @@
+{
+    "id": 0,
+    "info": {
+        "name": {
+            "first": "Peter",
+            "last": "Bækgaard",
+            "full": "Peter Bækgaard"
+        },
+        "email": "peter@mail.dk",
+        "password": "test123"
+    },
+    "apps": {
+        "communication": {
+            "primary": "discord",
+            "discord": {
+                "appName": "Discord",
+                "token": "OTUzMjM5OTMxNTc5NDI0Nzk5.GpXHYx.FIs7WgkAymKLIf6377CJWVyCchV4EqGl2SznzA",
+                "channel": "953268561701384222"
+            },
+            "slack": {
+                "appName": "Slack",
+                "token": "test",
+                "channel": "test"
+            }
+        },
+        "kanban": {
+            "primary": "trello",
+            "trello": {
+                "appName": "Trello",
+                "token": "f09cf7162fa3d6a5a43603dca3b9ea9705ebf2b15bc243ea44ec27e8a1b8bc3f",
+                "key": "78fa92357545458e00887662216ca720",
+                "boardID": "qmYTDmnf",
+                "primaryList": "62038170329707085fa6a0f4"
+            },
+            "gitkraken": {
+                "appName": "GitKraken",
+                "token": "dsa",
+                "key": "dsa"
+            }
+        },
+        "calendar": {
+            "primary": "google",
+            "google": {
+                "appName": "Google",
+                "clientId": "421238555838-5093o0q3kh5gtlco72m3jbhh8r3jb86f.apps.googleusercontent.com",
+                "clientSecret": "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",
+                "refreshToken": "1//0497bb2UzUbX9CgYIARAAGAQSNwF-L9IrlRi56HnHLcmwKrhW4sLnGdFSNSzNqslYlfGqKBFFiyGwXziYkxnCwgqyeejHQOPI6Gg"
+            }
+        }
+    },
+    "groupId": "ztcl0g"
+}

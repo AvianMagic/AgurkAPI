@@ -1,0 +1,32 @@
+{
+    "id": 3,
+    "info": {
+        "name": {
+            "first": "Mathias",
+            "last": "Jakobsen",
+            "full": "Mathias Jakobsen"
+        },
+        "email": "mat@mail.dk",
+        "password": "hehe356"
+    },
+    "apps": {
+        "communication": {
+        },
+        "kanban": {
+            "primary": "gitkraken",
+            "gitkraken": {
+                "appName": "Glo Boards",
+                "key": "2eb25458-4237-4c84-be42-a14e14f4b16f",
+                "token": "p798b11d4c4239b405b51275415638e743d465930",
+                "boardID": "6269857ef838700020a1d61b"
+            }
+        },
+        "calendar": {
+            "googleCalendar": {
+                "appName": "googleCalendar",
+                "apiKey": "AIzaSyCGfWDWAcDpZtrL9wiJ4AbV-kV4CSLCL5Y",
+                "token": "ya29.A0ARrdaM9eQJNbmvf6PZzTUlcV1VAYdQYnSHcxlvO-9u0WF6dOg8CzRiTb8J8lgkO3z4xnFbf8p9j5ZFkEcjmkpjYpdCyp4JG6bYw8I6bwOy25xagCeT1gCROxOKYyIm-bRboHUZEaJn2c2FREqqwA2elF9MtjOEpq7TCF7fZfvjeA_zeZ2oFqrB8fv1x8w-0y8EPPpUgn0ohyUhZ9TxDFOYpoojC53K_fFm9WYLxEOwKdU52XshF3ZJfFVrPi7LSGllsC7Q"
+            }
+        }
+    }
+}

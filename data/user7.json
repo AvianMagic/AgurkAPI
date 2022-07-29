@@ -1,0 +1,24 @@
+{
+    "id": 7,
+    "info": {
+        "name": {
+            "first": "test",
+            "last": "test",
+            "full": "test test"
+        },
+        "email": "test@mailfdsa",
+        "password": "test"
+    },
+    "apps": {
+        "communication": {},
+        "kanban": {},
+        "calendar": {
+            "primary": "googleCalendar",
+            "googleCalendar": {
+                "appName": "google",
+                "refreshToken": "test",
+                "clientSecret": "test"
+            }
+        }
+    }
+}
